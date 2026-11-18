@@ -1,1 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Harapan Dandelion - Ruth B.</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts untuk Tampilan Estetik -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,600&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+  <!-- Library Three.js untuk Animasi 3D -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
 
+  <!-- Kontrol Audio di Pojok Kiri Atas -->
+  <div id="audio-controls">
+    <button id="btn-audio" title="Putar / Jeda Musik">🔇 Putar Musik</button>
+    <label for="upload-mp3" class="btn-upload" title="Pilih file dandelions.mp3 dari perangkat">📂 Pilih MP3</label>
+    <input type="file" id="upload-mp3" accept="audio/*">
+  </div>
+
+  <!-- Elemen Audio (Letakkan file dandelions.mp3 di folder yang sama) -->
+  <audio id="bg-music" loop preload="auto">
+    <source src="dandelions.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Indikator Progress & Petunjuk Tap Layar -->
+  <div id="ui-container">
+    <div id="tap-hint">✨ Tap layar untuk menumbuhkan Dandelion ✨</div>
+    <div id="progress-wrapper">
+      <div id="progress-bar"></div>
+    </div>
+  </div>
+
+  <!-- Layar Akhir: Kata-Kata Kehidupan Bercahaya & Efek Kunang-Kunang -->
+  <div id="quote-overlay" class="hidden">
+    <div class="quote-box">
+      <p class="glowing-text">
+        "Seperti bunga dandelion yang tumbuh sederhana di sudut taman,<br>
+        setiap harapan membutuhkan kesabaran untuk mekar.<br>
+        Dan ketika angin kehidupan datang menerbangkannya,<br>
+        jangan takut terlepas—sebab setiap benih yang terbang<br>
+        sedang mencari tempat baru untuk menumbuhkan keajaiban."
+      </p>
+      <span class="song-credit">♪ Dandelions — Ruth B.</span>
+      <button id="btn-replay">🌱 Tanam Harapan Baru</button>
+    </div>
+  </div>
+
+  <!-- Kanvas 3D -->
+  <div id="canvas-container"></div>
+
+  <!-- Script Utama -->
+  <script src="script.js"></script>
+</body>
+</html>
